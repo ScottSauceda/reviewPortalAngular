@@ -1,0 +1,9 @@
+<div class="flex-column">
+    <div class="card-body d-flex flex-column order" routerLink="{{reviewData.reviewId}}">
+        <!-- <p>Review Id: {{reviewData.reviewId}}</p> -->
+         <p>{{reviewData.reviewText}}</p>
+         <ngb-rating [max]="5" [(rate)]="reviewData.reviewRating" [readonly]="true"></ngb-rating>
+         <p>Reviewed On: {{reviewData.reviewDate | date}}</p>
+    </div>
+    <hr />
+</div>
