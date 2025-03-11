@@ -1,0 +1,37 @@
+<div class="min-vh-100">
+    <div class="row">
+        <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center" *ngIf="!profileLoaded">
+                <div class="spinner-border"></div>
+                 <!-- profile not loaded -->
+            </div>
+
+            <div class="d-flex flex-wrap align-content-center justify-content-center border rounded p-3 mt-4" *ngIf="profileLoaded && !editing && !addingPhoto">
+                <!-- <div class="d-flex flex-wrap align-content-center justify-content-center border rounded p-3"> -->
+                <div>
+                    <p>User Id: {{profile.userId}}</p>
+                    <p>User Name: {{profile.userName}}</p>
+                    <p>Email: {{profile.email}}</p>
+                    <p>Phone: {{profile.phone}}</p>
+                    <p>First Name: {{profile.firstName}}</p>
+                    <p>Last Name: {{profile.lastName}}</p>
+                    <p>Profile Active: {{profile.isActive}}</p>
+                    <div *ngIf="!profile.profileImage">
+                        <img style="max-width: 250px; height: auto; border: 1px solid black" src="https://cvhrma.org/wp-content/uploads/2015/07/default-profile-photo.jpg" />
+                    </div>
+                    <div class="text-center">
+                        <!-- <button *ngIf="!profile.profileImage" class="btn btn-primary m-2 mt-3 mb-3" (click)="addPhoto()">Add Photo</button> -->
+                        <button *ngIf="!profile.profileImage" class="btn btn-primary m-2 mt-3 mb-3">Add Photo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    <div class="row">
+        <div class="d-flex justify-content-center">
+        </div>
+    </div> 
+    -->
+</div>
